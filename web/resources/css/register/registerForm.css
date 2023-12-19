@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .header{
+        margin:0px 350px;
+
+    }
+
+    .footer{
+        margin:50px 350px;
+
+    }
+
+    .register_area{
+        margin: 50px 10px;
+    }
+
+    .register_title{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .form_box{
+        width: 100%;
+        max-width: 500px; /* Set a maximum width for the form box */
+        margin: 0 auto;
+        background: white;
+        padding: 0 5%;
+        border-radius: 10px;
+    }
+
+    .register_table{
+        width:100%;
+        margin: 20px 0;
+    }
+
+    tr{
+
+    }
+
+    th{
+        text-align: left;
+    }
+
+    hr{
+        width: 100%;
+        opacity: 20%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    table{
+        border-spacing: 30px;
+
+    }
+
+    .register_button{
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 20px;
+        height: 50px;
+        color: white;
+    }
+
+    .addrButton{
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 20px;
+        height: 50px;
+        color: white;
+        margin: 20px 0;
+    }
+
+    .register_button:hover, #addrButton:hover {
+        color: #ffffff;
+        background-color: #222;
+        cursor:pointer;
+    }
+
+    input{
+        border: none;
+        width: 100%;
+        height: 30px;
+        font-size: 30px;
+    }
+
+    input:focus {outline:none;}
+
+
+    .gender_box, .phone_box, .id_box, .pass_box, .re_pass_box, .addr_box, .nick_box{
+        margin: 20px 0;
+    }
+
+
+    .addr{
+        font-size: 20px;
+    }
+
+    input::placeholder {
+        color: #E2E2E2;
+        font-family:inherit;
+    }
+    input[type=radio] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+
+        border: 2px solid #999;
+        transition: 0.2s all linear;
+        margin-right: 3px;
+
+        position: relative;
+        top: 4px;
+    }
+
+    input[type=radio]:checked {
+        border: 6px solid black;
+    }
+
+    input[type=text],input[type=password]{
+        border-right:1px;
+        border-top:1px;
+        border-left:1px;
+        margin-bottom:10px;
+        border-bottom-width:thin;
+        border-color: #E2E2E2;
+    }
+
+
+
+    select {
+        padding-left:10px;
+        width: 122px;
+        height: 27px;
+        /* padding: .8em .5em; */
+        font-family: inherit;
+        background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid #999;
+        border-radius: 10px;
+    }
+
+    .email{
+        padding:7px;
+        width: auto;
+        color: #ffffff;
+        border: #E2E2E2 solid 1px;
+        background-color: #c0c0c0;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    select:hover{
+        outline:none;
+    }
+
+
+    @media (max-width: 768px) {
+        /* Adjust styles for smaller screens */
+        .form_box {
+            padding: 0 3%;
+        }
+
+        input, th, hr {
+            font-size: 14px;
+        }
+
+        .register_button {
+            font-size: 16px;
+        }
+    }

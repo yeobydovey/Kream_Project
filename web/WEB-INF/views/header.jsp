@@ -33,10 +33,11 @@
 
         list-style: none;
         display: inline;
+        margin: 5px;
 
     }
 
-    .kream{
+    .header_title{
         width:50%;
     }
 
@@ -44,7 +45,10 @@
         width:50%;
     }
 
-
+    a{
+        text-decoration: none;
+        color: black;
+    }
 
 
 </style>
@@ -65,7 +69,7 @@
         </div> <%--1--%>
         <div> <%--2--%>
             <div class="header2">
-                <h1 class="kream">KREAM</h1>
+                <h1 class="header_title">KREAM</h1>
                 <div class="right">
                     <ul class="mid_link">
                         <li><a href="<c:url value='/'/>">HOME</a></li>

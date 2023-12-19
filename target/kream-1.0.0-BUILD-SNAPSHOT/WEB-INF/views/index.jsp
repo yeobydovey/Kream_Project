@@ -14,27 +14,36 @@
     <style>
 
         *{
-            margin: 0 auto;
+            margin: 0;
+            padding: 0;
         }
 
-        .content{
-            background-color: bisque;
-        }
 
         .header{
-            margin:0px 100px;
-            background-color: darksalmon;
+            margin:0px 350px;
+
+        }
+        .content{
+            margin:0px 350px;
         }
 
         .footer{
-            margin:50px 140px;
-            background-color: antiquewhite;
+            margin:50px 350px;
+
         }
 
         .h1{
             border: 1px solid ;
             padding: 20px;
         }
+
+        hr{
+            width: 100%;
+            opacity: 20%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
     </style>
 </head>
 <body>
@@ -44,13 +53,10 @@
 
 
     <div class="content">
-        <h1 class="h1">dddd</h1>
         <section><jsp:include page="thumbnail/justDropped.jsp"/></section>
-
-
-
-
     </div> <%--content--%>
+
+    <hr/>
 
     <div class="footer">
         <footer><jsp:include page="footer.jsp"/></footer>
