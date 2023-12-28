@@ -119,6 +119,14 @@
         <header><jsp:include page="../header.jsp"/></header>
     </div> <%--header--%>
 
+    <script>
+        let message = "${message}";
+        if(message == "회원가입 성공"){
+            alert("회원가입이 완료되었습니다.");
+        }
+
+    </script>
+
     <div class="login_area"> <%--1--%>
         <div class="login_box">
             <div class="login_titleBox">
@@ -143,7 +151,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="password" name="pw">
+                                <input type="password" name="pw" autocomplete="off">
                                 <hr/>
                             </td>
                         </tr>

@@ -6,4 +6,23 @@
     <select id="user_idCheck" parameterType="String" resultType="int">
         SELECT count(*) FROM users WHERE user_id = #{user_id}
     </select>
+
+    <select id="user_nickCheck" parameterType="String" resultType="int">
+        SELECT count(*) FROM users WHERE user_nick = #{user_nick}
+    </select>
+
+    <select id="user_phoneCheck" parameterType="String" resultType="int">
+        SELECT count(*) FROM users WHERE user_phone = #{user_phone}
+    </select>
+
+    <select id="user_emailCheck" parameterType="String" resultType="int">
+        SELECT count(*) FROM users WHERE user_email = #{user_email}
+    </select>
+
+    <insert id="signUp" parameterType="RegisterDto">
+        INSERT INTO users
+            (user_id, user_pw, user_nick, user_email, user_addr, user_addrDetail, user_postCode, user_phone)
+        VALUES
+            (#{user_id}, #{user_pw}, #{user_nick}, #{user_email}, #{user_addr}, #{user_addrDetail}, #{user_postCode}, #{user_phone})
+    </insert>
 </mapper>
