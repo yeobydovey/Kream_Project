@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    margin:0px 350px;
+
+}
+
+.footer{
+    margin:50px 350px;
+
+}
+
+hr{
+    width: 100%;
+    opacity: 20%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .form_box {
+        padding: 0 3%;
+    }
+
+    input, th, hr {
+        font-size: 14px;
+    }
+
+
+}

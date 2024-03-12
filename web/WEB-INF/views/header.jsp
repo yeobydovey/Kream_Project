@@ -78,7 +78,7 @@
                     <ul class="mid_link">
                         <li><a href="<c:url value='/'/>">HOME</a></li>
                         <li><a href="#">STYLE</a></li>
-                        <li><a href="#">SHOP</a></li>
+                        <li><a href="<c:url value='/shop/shop'/>">SHOP</a></li>
                     </ul>
                 </div>
             </div>
