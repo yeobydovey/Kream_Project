@@ -25,4 +25,8 @@
         VALUES
             (#{user_id}, #{user_pw}, #{user_nick}, #{user_email}, #{user_addr}, #{user_addrDetail}, #{user_postCode}, #{user_phone})
     </insert>
+
+    <select id="loginCheck" parameterType="String" resultType="RegisterDto">
+        SELECT * FROM users WHERE user_id = #{user_id}
+    </select>
 </mapper>

@@ -11,4 +11,6 @@ public interface RegisterDao {
     int emailCheck(String user_email) throws Exception;
 
     int signUp(RegisterDto rd)throws Exception;
+
+    RegisterDto loginCheck(String user_id) throws  Exception;
 }

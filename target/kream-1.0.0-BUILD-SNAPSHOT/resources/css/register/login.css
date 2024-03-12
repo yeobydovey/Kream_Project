@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    margin:0px 350px;
+
+}
+
+.footer{
+    margin:50px 350px;
+
+}
+
+.login_area{
+    margin: 50px 10px;
+}
+.login_box{
+
+}
+
+.login_title{
+    text-align: center;
+    font-size: 30px;
+}
+
+.form_box{
+    width: 100%;
+    max-width: 500px; /* Set a maximum width for the form box */
+    margin: 0 auto;
+    background: white;
+    padding: 0 5%;
+    border-radius: 10px;
+}
+
+.login_table{
+    width:100%;
+}
+
+.login_p{
+    text-align: center;
+    font-size: 15px;
+}
+
+input{
+    border: none;
+    width: 100%;
+    height: 30px;
+    font-size: 30px;
+
+}
+
+input::placeholder {
+    color: #E2E2E2;
+    font-family:inherit;
+}
+
+th{
+    text-align: left;
+}
+
+hr{
+    width: 100%;
+    opacity: 20%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+table{
+    border-spacing: 15px;
+}
+.login_button{
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    height: 50px;
+    color: white;
+}
+
+.look_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.look_list{
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .form_box {
+        padding: 0 3%;
+    }
+
+    input, th, hr {
+        font-size: 14px;
+    }
+
+    .login_button {
+        font-size: 16px;
+    }
+}

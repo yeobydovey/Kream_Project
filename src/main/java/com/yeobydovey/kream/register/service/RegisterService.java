@@ -14,4 +14,6 @@ public interface RegisterService {
 
     // 회원가입
     int signUp(RegisterDto rd)throws Exception;
+
+    RegisterDto loginCheck(String user_id) throws Exception;
 }

@@ -1,5 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false"%>
+<c:set var="loginId" value="${pageContext.request.session.getAttribute('user_id') == null ? '' : pageContext.request.session.getAttribute('user_id')}"/>
+<c:set var="loginOutLink" value="${loginId=='' ? '/register/login' : '/register/logout'}"/>
+<c:set var="loginOut" value="${loginId=='' ? '로그인' : loginId}"/>
 <html>
 <head>
     <title>Title</title>
@@ -63,7 +67,7 @@
                     <li><a href="#">마이페이지</a></li>
                     <li><a href="#">관심상품</a></li>
                     <li><a href="#">알림</a></li>
-                    <li><a href="<c:url value='/login/login'/>">로그인</a></li>
+                    <li><a href="<c:url value='${loginOutLink}'/>">${loginOut}</a></li>
                 </ul>
             </div>
         </div> <%--1--%>

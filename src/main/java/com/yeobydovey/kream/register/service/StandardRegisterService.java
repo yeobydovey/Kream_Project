@@ -74,4 +74,10 @@ public class StandardRegisterService implements RegisterService {
     public int signUp(RegisterDto rd) throws Exception {
         return registerDao.signUp(rd);
     }
+
+    @Override
+    public RegisterDto loginCheck(String user_id) throws Exception {
+
+        return registerDao.loginCheck(user_id);
+    }
 }

@@ -1,115 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false"%>
+
 <html>
 <head>
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" type="text/css"/>
+    <link href="<c:url value='/resources/css/register/login.css?after'/>" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     <style>
-
-        *{
-            margin: 0;
-            padding: 0;
-        }
-
-        .header{
-            margin:0px 350px;
-
-        }
-
-        .footer{
-            margin:50px 350px;
-
-        }
-
-        .login_area{
-            margin: 50px 10px;
-        }
-        .login_box{
-
-        }
-
-        .login_title{
-            text-align: center;
-            font-size: 30px;
-        }
-
-        .form_box{
-            width: 100%;
-            max-width: 500px; /* Set a maximum width for the form box */
-            margin: 0 auto;
-            background: white;
-            padding: 0 5%;
-            border-radius: 10px;
-        }
-
-        .login_table{
-            width:100%;
-        }
-
-        .login_p{
-            text-align: center;
-            font-size: 15px;
-        }
-
-        input{
-            border: none;
-            width: 100%;
-            height: 30px;
-            font-size: 30px;
-
-        }
-
-        input::placeholder {
-            color: #E2E2E2;
-            font-family:inherit;
-        }
-
-        th{
-            text-align: left;
-        }
-
-        hr{
-            width: 100%;
-            opacity: 20%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        table{
-            border-spacing: 15px;
-        }
-        .login_button{
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 20px;
-            height: 50px;
-            color: white;
-        }
-
-        .look_box{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-
-        }
-
-        .look_list{
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            /* Adjust styles for smaller screens */
-            .form_box {
-                padding: 0 3%;
-            }
-
-            input, th, hr {
-                font-size: 14px;
-            }
-
-            .login_button {
-                font-size: 16px;
-            }
-        }
 
 
     </style>
@@ -135,15 +36,20 @@
             </div>
 
             <div class="form_box">
-                <form>
+                <form action="<c:url value='/register/login'/>" method="post" onsubmit="return formCheck(this);">
                     <table class="login_table">
                         <tr>
                             <th>아이디</th>
                         </tr>
                         <tr>
                             <td>
-                                <input type="text" name="uid" value="" placeholder="예) KreamPeople">
+                                <input type="text" name="user_id" class="user_id" value="" placeholder="예) KreamPeople">
                                 <hr/>
+                                <div id="msg_id">
+                                    <c:if test="${not empty param.msg}">
+                                        <i class="fa fa-exclamation-circle"> ${URLDecoder.decode(param.msg)}</i>
+                                    </c:if>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -151,8 +57,13 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="password" name="pw" autocomplete="off">
+                                <input type="password" name="user_pw" class="user_pw" autocomplete="off">
                                 <hr/>
+                                <div id="msg_pw">
+                                    <c:if test="${not empty param.msg}">
+                                        <i class="fa fa-exclamation-circle"> ${URLDecoder.decode(param.msg)}</i>
+                                    </c:if>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -176,5 +87,56 @@
     <div class="footer">
         <footer><jsp:include page="../footer.jsp"/></footer>
     </div> <%--footer--%>
+    <script>
+
+        // 정규식 msg
+        function setMessage(tagId, msg, isCheck){
+            if(isCheck == false){
+                document.getElementById(tagId).innerHTML = `<span style="color : red; font-size: 13px;"> ${'${msg}'} </span>  `;
+
+            }
+
+        }
+
+        let boolUser_id = false;
+        let boolUser_pw = false;
+
+
+
+
+        // user_id 태그에 값이 작성 될 때
+        $(".user_id").on("input", function (){
+            let message = " ";
+            setMessage("msg_id", message, boolUser_id);
+        });
+
+
+        // user_pw 태그에 값이 작성 될 때
+        $(".user_pw").on("input", function (){
+            let message = " ";
+            setMessage("msg_pw", message, boolUser_id);
+        });
+
+
+
+
+        // 로그인 버튼 클릭 후에 공백 체크
+        function formCheck(frm) {
+            let message = '';
+            if(frm.elements['user_id'].value.length === 0){
+                message = "아이디를 확인해주세요.";
+                setMessage("msg_id", message, boolUser_id);
+                return false;
+            }else if(frm.elements['user_pw'].value.length === 0){
+                let message_id = "";
+                setMessage("msg_id", message_id, boolUser_id);
+                message = "비밀번호를 확인해주세요.";
+                setMessage("msg_pw", message, boolUser_pw);
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
 </body>
 </html>

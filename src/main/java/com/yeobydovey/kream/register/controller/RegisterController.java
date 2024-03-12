@@ -12,6 +12,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/register")
@@ -141,6 +144,48 @@ public class RegisterController {
         }
         return "login/login";
 
+    }
+
+
+    @GetMapping ("/login")
+    public String loginForm() {
+        return "login/login";
+    }
+
+
+    @PostMapping("/login")
+    public String login(String user_id, String user_pw, HttpServletRequest request, HttpServletResponse response) throws Exception{
+
+        System.out.println(user_id + " / "+ user_pw);
+
+        if(!loginCheck(user_id, user_pw)){
+            return "redirect:/";
+        }
+        // id, pw가 일치하면 session 객체 얻어오기
+        HttpSession session = request.getSession();
+
+        session.setAttribute("user_id", user_id);
+        
+
+
+
+
+
+        return "redirect:/";
+
+    }
+
+    private boolean loginCheck(String user_id, String user_pw){
+
+        RegisterDto rd = null;
+
+        try {
+            rd = registerService.loginCheck(user_id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return rd != null && rd.getUser_pw().equals(user_pw);
     }
 
 }

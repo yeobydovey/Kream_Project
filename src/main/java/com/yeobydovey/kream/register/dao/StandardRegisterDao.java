@@ -53,4 +53,11 @@ public class StandardRegisterDao implements RegisterDao {
 
         return session.insert(namespace+"signUp", rd);
     }
+
+    @Override
+    public RegisterDto loginCheck(String user_id) throws Exception {
+
+
+        return session.selectOne(namespace+"loginCheck", user_id);
+    }
 }

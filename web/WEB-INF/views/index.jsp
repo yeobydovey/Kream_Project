@@ -1,11 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: flyin
-  Date: 2023-12-02
-  Time: 오후 5:11
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session ="false"%>
 
 <html>
 <head>
@@ -51,6 +46,26 @@
         <header><jsp:include page="header.jsp"/></header>
     </div> <%--header--%>
 
+    <h1>session?</h1>
+
+    <%
+        // Get the HttpSession object without creating a new one
+        HttpSession session = request.getSession(false);
+    %>
+
+    <br/>
+
+    <%
+        if (session == null || session.getId() == null) {
+    %>
+    <%= "Session is null." %>
+    <%
+    } else {
+    %>
+    <%= session.getId() %>
+    <%
+        }
+    %>
 
     <div class="content">
         <section><jsp:include page="thumbnail/justDropped.jsp"/></section>
