@@ -5,5 +5,6 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="RegisterDto" type="com.yeobydovey.kream.register.dao.RegisterDto"/>
+        <typeAlias alias="ProductDto" type="com.yeobydovey.kream.shop.dao.ProductDto"/>
     </typeAliases>
 </configuration>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yeobydovey.kream.shop.dao.ProductMapper">
+    <select id="listPage" resultType="ProductDto">
+        SELECT p_seq, p_brand, p_eng_name, p_kr_name, p_model_no, p_release_date, p_heart, p_root FROM product
+    </select>
+
+    <select id="productImgFind" parameterType="int" resultType="String">
+        SELECT pi_name FROM product_img WHERE p_seq = #{p_seq}
+
+    </select>
+
+    <insert id="productCreate" parameterType="productDto">
+        INSERT INTO product
+            (p_brand, p_eng_name, p_kr_name, p_model_no, p_release_date, p_root)
+        VALUES
+            (#{p_brand},#{p_eng_name},#{p_kr_name},#{p_model_no},#{p_release_date},#{p_root})
+    </insert>
+</mapper>
