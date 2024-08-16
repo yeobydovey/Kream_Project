@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class ProductDto {
     private int p_seq;
+    private String p_category;
     private String p_brand;
     private String p_eng_name;
     private String p_kr_name;
@@ -12,6 +13,13 @@ public class ProductDto {
     private int p_heart;
     private String p_root;
 
+    public String getP_category() {
+        return p_category;
+    }
+
+    public void setP_category(String p_category) {
+        this.p_category = p_category;
+    }
 
     public String getP_root() {
         return p_root;

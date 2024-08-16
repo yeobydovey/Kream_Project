@@ -22,6 +22,17 @@
                 <form class="p_create" name="p_create" id="p_create" action="<c:url value='/shop/create'/>" enctype="multipart/form-data" method="post">
                     <table class="create_table">
                        <tr>
+                            <th>카테고리*</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div  class="category_box">
+                                    <input type="text" name="p_category" id="p_category" class="p_category" value="" placeholder="예) 신발">
+                                    <hr/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
                             <th>브랜드*</th>
                         </tr>
                         <tr>

@@ -73,6 +73,7 @@ public class ShopController {
 
     @PostMapping("/create")
     public String productCreate(
+            @RequestParam String p_category,
             @RequestParam String p_brand,
             @RequestParam String p_eng_name,
             @RequestParam String p_kr_name,
@@ -83,7 +84,7 @@ public class ShopController {
 
         String fileName = p_img.getOriginalFilename();
 
-        System.out.println(p_brand+"."+p_eng_name+"."+p_kr_name+"."
+        System.out.println(p_category+"."+p_brand+"."+p_eng_name+"."+p_kr_name+"."
                 +p_model_no+"."+p_release_date+"."+fileName);
 
         String uploadPath = "D:\\myApp\\kream\\web\\resources\\product_img";
@@ -107,6 +108,7 @@ public class ShopController {
         Date releaseDate = simpleDateFormat.parse(p_release_date);
 
         ProductDto productDto = new ProductDto();
+        productDto.setP_category(p_category);
         productDto.setP_brand(p_brand);
         productDto.setP_eng_name(p_eng_name);
         productDto.setP_kr_name(p_kr_name);
