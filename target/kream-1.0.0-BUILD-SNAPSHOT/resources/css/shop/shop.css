@@ -1,149 +1,175 @@
-    @charset "UTF-8";
+@charset "UTF-8";
 
-    *{
-        margin: 0;
-        padding: 0;
-    }
+*{
+    margin: 0;
+    padding: 0;
+}
 
-    .header{
-        margin:0px 350px;
+.header{
+    margin:0px 350px;
 
-    }
+}
 
-    .footer{
-        margin:50px 350px;
+.footer{
+    margin:50px 350px;
 
-    }
+}
 
-    .longHr{
+.longHr{
 
-        width: 100%;
+    width: 100%;
 
-        opacity: 20%;
-        /*max-width: 1500px;*/
-    }
+    opacity: 20%;
+    /*max-width: 1500px;*/
+}
 
-    .shortHr{
-        width: 100%;
-        opacity: 20%;
-        max-width: 1350px;
-    }
-
-
-
-    .filter_hr{
-        width: 100%;
-        opacity: 20%;
-    }
-
-    .board_wrap{
-        margin: 0 350px;
-    }
-
-    .title_txt{
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .tabs > ul{
-        text-align: center;
-        font-size: 17px;
-        margin-bottom: 15px;
-    }
-
-    .trend_box{
-        display: flex;
-        justify-content: space-evenly;
-        margin-bottom: 15px;
-    }
-
-    .trend_item{
-        text-align: center;
-    }
+.shortHr{
+    width: 100%;
+    opacity: 20%;
+    max-width: 1350px;
+}
 
 
-    .trend_imgBox > img{
-        width: 100px;
-        height: 100px;
-    }
 
-    .content_wrap{
-        display: flex;
-    }
+.filter_hr{
+    width: 100%;
+    opacity: 20%;
+}
 
-    .filter_title_box{
+.board_wrap{
+    margin: 0 350px;
+}
 
-    }
+.title_txt{
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-    .filter_status, .filter_title{
-        padding: 20px 0 16px;
-    }
+.tabs > ul{
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
 
-    .filter_list > .filter_title{
-        display: flex;
-        justify-content: space-between;
-    }
+.trend_box{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
 
-    .filter_placeholder{
-        display: block;
-        width:220px;
-        color: lightgray;
-    }
+.trend_item{
+    text-align: center;
+}
 
 
-    .filter_menu > ul{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
+.trend_imgBox > img{
+    width: 100px;
+    height: 100px;
+}
 
-    .product_wrap{
-        padding: 20px 0 16px;
-        margin-left: 15px;
-    }
+.content_wrap{
+    display: flex;
+}
 
-    .shop_count{
-        display: flex;
-    }
+.filter_title_box{
 
-    .product_count{
-        width: 1000px;
-    }
+}
 
-    .product_display{
-        display: flex;
-        width: 230px;
+.filter_status, .filter_title{
+    padding: 20px 0 16px;
+}
 
-    }
+.filter_list > .filter_title{
+    display: flex;
+    justify-content: space-between;
+}
 
-    .product_box{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
+.filter_placeholder{
+    display: block;
+    width:220px;
+    color: lightgray;
+}
 
-    .product_img{
-        width: 230px;
-        height: 230px;
-    }
 
-    .product_brand{
-        font-weight: bold;
-    }
+.filter_menu > ul{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
 
-    .product_content_price{
-        font-weight: bold;
-    }
+.product_wrap{
+    padding: 20px 0 16px;
+    margin-left: 15px;
+}
 
-    .product_img > img {
-        width: 230px;
-        height: 230px;
-    }
+.shop_count{
+    display: flex;
+}
 
-    .product_kr_name{
-        color: lightgray;
-        font-size: small;
-        margin-bottom: 10px;
-    }
+.product_count{
+    width: 1000px;
+    margin-bottom: 30px;
+}
+
+.product_display{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+
+.product_items {
+    flex: 1 1 calc(25% - 10px);
+    max-width: 25%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.product_box{
+    width: 100%;
+}
+
+.product_img{
+    max-width: 230px;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    background-color:#EFF5FB;
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+.product_brand{
+    font-weight: bold;
+}
+
+.product_content_price{
+    font-weight: bold;
+}
+
+.product_img > img {
+    max-width: 230px;
+    height: 230px;
+    border-radius: 14px;
+}
+
+.product_content > p{
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+}
+.product_kr_name, .product_eng_name{
+    max-height: 3em;
+    line-height: 1.5em;
+}
+.product_kr_name{
+    color: lightgray;
+    font-size: small;
+    margin-bottom: 10px;
+}
 

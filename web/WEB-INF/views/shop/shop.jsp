@@ -5,7 +5,7 @@
     <title>Title</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <link href="<c:url value='/resources/css/shop/shop.css?after'/>" rel="stylesheet"/>
+    <link href="<c:url value='/resources/css/shop/shop.css'/>" rel="stylesheet"/>
     <%--<script src="<c:url value="/resources/js/shop/shop.js"/>"></script>--%>
 </head>
 
