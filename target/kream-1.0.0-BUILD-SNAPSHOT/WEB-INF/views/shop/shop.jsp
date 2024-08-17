@@ -3,6 +3,13 @@
 <html>
 <head>
     <title>Title</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jua&family=
+    Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Rubik+Mono+One&display=
+    swap" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <link href="<c:url value='/resources/css/shop/shop.css'/>" rel="stylesheet"/>
@@ -20,16 +27,16 @@
         <nav class="pc_shop_tab">
             <div class="tabs">
                 <ul>
-                    <li><a>전체</a></li>
-                    <li>아우터</li>
-                    <li>신발</li>
-                    <li>상의</li>
-                    <li>하의</li>
-                    <li>패션잡화</li>
-                    <li>뷰티</li>
-                    <li>테크</li>
-                    <li>캠핑</li>
-                    <li>가구/리빙</li>
+                    <li class="tabs_list"><a>전체</a></li>
+                    <li class="tabs_list">아우터</li>
+                    <li class="tabs_list">신발</li>
+                    <li class="tabs_list">상의</li>
+                    <li class="tabs_list">하의</li>
+                    <li class="tabs_list">패션잡화</li>
+                    <li class="tabs_list">뷰티</li>
+                    <li class="tabs_list">테크</li>
+                    <li class="tabs_list">캠핑</li>
+                    <li class="tabs_list">가구/리빙</li>
                 </ul>
             </div>
         </nav>
