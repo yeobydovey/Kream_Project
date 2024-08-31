@@ -24,6 +24,7 @@
     <context:component-scan base-package="com.yeobydovey.kream"/>
 
     <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <mvc:resources mapping="/js/**" location="/resources/js/"/>
 
 
 

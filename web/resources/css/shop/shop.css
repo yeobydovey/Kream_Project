@@ -83,6 +83,15 @@
 
 }
 
+.icon_box {
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+.icon_box.expanded {
+    transform: rotate(180deg); /* Example transformation */
+}
+
 .filter_title_box{
 
 }
@@ -102,10 +111,15 @@
     color: lightgray;
 }
 
+.bold-font {
+    font-weight: bold;
+}
+
 .filter_menu{
     margin: 5px;
     font-family: "Noto Sans KR", sans-serif;
     font-style: normal;
+    display: none;
 
 }
 

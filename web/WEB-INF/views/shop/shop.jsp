@@ -83,20 +83,20 @@
                                 <span class="filter_placeholder">모든 카테고리</span>
                             </div>
                             <div class="icon_box">
-                                <span>-</span>
+                                <span>+</span>
                             </div>
                         </div>
                         <div class="filter_menu">
                             <ul>
-                                <li><input type="checkbox"/>&nbsp;아우터</li>
-                                <li><input type="checkbox"/>&nbsp;신발</li>
-                                <li><input type="checkbox"/>&nbsp;상의</li>
-                                <li><input type="checkbox"/>&nbsp;하의</li>
-                                <li><input type="checkbox"/>&nbsp;패션잡화</li>
-                                <li><input type="checkbox"/>&nbsp;뷰티</li>
-                                <li><input type="checkbox"/>&nbsp;테크</li>
-                                <li><input type="checkbox"/>&nbsp;캠핑</li>
-                                <li><input type="checkbox"/>&nbsp;가구/리빙</li>
+                                <li><label for="category_chk1"><input type="checkbox" class="category_chk" id="category_chk1" data-value="아우터"/>&nbsp;아우터</label></li>
+                                <li><label for="category_chk2"><input type="checkbox" class="category_chk" id="category_chk2" data-value="신발"/>&nbsp;신발</label></li>
+                                <li><label for="category_chk3"><input type="checkbox" class="category_chk" id="category_chk3" data-value="상의"/>&nbsp;상의</label></li>
+                                <li><label for="category_chk4"><input type="checkbox" class="category_chk" id="category_chk4" data-value="하의"/>&nbsp;하의</label></li>
+                                <li><label for="category_chk5"><input type="checkbox" class="category_chk" id="category_chk5" data-value="패션잡화"/>&nbsp;패션잡화</label></li>
+                                <li><label for="category_chk6"><input type="checkbox" class="category_chk" id="category_chk6" data-value="뷰티"/>&nbsp;뷰티</label></li>
+                                <li><label for="category_chk7"><input type="checkbox" class="category_chk" id="category_chk7" data-value="테크"/>&nbsp;테크</label></li>
+                                <li><label for="category_chk8"><input type="checkbox" class="category_chk" id="category_chk8" data-value="캠핑"/>&nbsp;캠핑</label></li>
+                                <li><label for="category_chk9"><input type="checkbox" class="category_chk" id="category_chk9" data-value="가구/리빙"/>&nbsp;가구/리빙</label></li>
                             </ul>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                                 <span class="filter_placeholder">모든 가격</span>
                             </div>
                             <div class="icon_box">
-                                <span>-</span>
+                                <span>+</span>
                             </div>
                         </div>
                         <div class="filter_menu">
@@ -128,7 +128,7 @@
                                 <span class="filter_placeholder">모든 브랜드</span>
                             </div>
                             <div class="icon_box">
-                                <span>-</span>
+                                <span>+</span>
                             </div>
                         </div>
                     </div>
@@ -222,4 +222,5 @@ $(document).ready(function() {
 
 </script>
 </body>
+<script src="<c:url value="/js/shop/shop.js"/>"></script>
 </html>
