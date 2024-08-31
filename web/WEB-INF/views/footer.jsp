@@ -9,6 +9,11 @@
 <%@ page session="false"%>
 <html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jua&family=
+    Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Rubik+Mono+One&display=
+    swap" rel="stylesheet">
   <title>Title</title>
   <style>
     *{
@@ -18,6 +23,9 @@
 
     .footer_box{
       padding: 20px 40px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 400;
+      font-style: normal;
     }
 
     ul{
@@ -26,6 +34,7 @@
     .menu_li{
       display: block;
       padding: 5px;
+      margin: 5px;
     }
 
     .menuBox1{

@@ -38,6 +38,9 @@
 
 .board_wrap{
     margin: 0 350px;
+    font-family: "Noto Sans KR", sans-serif;
+
+    font-style: normal;
 }
 
 .title_txt{
@@ -49,6 +52,11 @@
     text-align: center;
     font-size: 17px;
     margin-bottom: 15px;
+}
+
+
+.tabs_list{
+    margin: 5px;
 }
 
 .trend_box{
@@ -71,6 +79,10 @@
     display: flex;
 }
 
+.filter_wrap{
+
+}
+
 .filter_title_box{
 
 }
@@ -90,6 +102,12 @@
     color: lightgray;
 }
 
+.filter_menu{
+    margin: 5px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+
+}
 
 .filter_menu > ul{
     display: flex;
@@ -126,6 +144,10 @@
     max-width: 25%;
     box-sizing: border-box;
     margin-bottom: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+    opacity: 0.9;
+
 }
 
 .product_box{
