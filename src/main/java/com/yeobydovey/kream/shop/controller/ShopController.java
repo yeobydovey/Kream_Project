@@ -7,10 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -20,6 +17,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -64,6 +62,32 @@ public class ShopController {
         return new ResponseEntity<>(productImgName, HttpStatus.OK);
     }
 
+
+    @PostMapping("/brandList")
+    @ResponseBody
+    public List<String> brandList(Model model){
+
+        System.out.println("brandList controller 호출");
+
+        List<String> bList = new ArrayList<>();
+        try{
+
+            bList = productService.brandList();
+            System.out.println(bList);
+            model.addAttribute("bList", bList);
+
+
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return bList;
+
+    }
+
+
     @GetMapping("/create")
     public String createPage(){
 
@@ -97,7 +121,7 @@ public class ShopController {
         File file = new File(uploadDir, fileName);
 
         try{
-        p_img.transferTo(file);
+            p_img.transferTo(file);
             System.out.println("성공");
         }catch (Exception e){
             e.printStackTrace();

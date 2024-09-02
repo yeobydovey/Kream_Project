@@ -1,4 +1,7 @@
-    // 필터 슬라이드 및 아이콘박스 변경
+
+
+
+// 필터 슬라이드 및 아이콘박스 변경
     $('.filter_list').click(function(event) {
 
         let clickElement = $(event.target);
@@ -55,4 +58,8 @@
             location.href = location.href;
         }
     })
+
+
+
+
 

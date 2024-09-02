@@ -8,5 +8,7 @@ public interface ProductDao {
 
     String productImgFind(int p_seq) throws Exception;
 
+    List<String> brandList() throws Exception;
+
     int productCreate(ProductDto productDto) throws Exception;
 }

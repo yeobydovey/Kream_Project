@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <div class="header">
         <header><jsp:include page="../header.jsp"/></header>
     </div>
@@ -127,9 +128,14 @@
                                 <span class="main_title">브랜드</span>
                                 <span class="filter_placeholder">모든 브랜드</span>
                             </div>
-                            <div class="icon_box">
+                            <div class="icon_box" id="brand_icon_box">
                                 <span>+</span>
                             </div>
+                        </div>
+                        <div class="filter_menu" style="overflow:scroll; overflow-x: hidden;  height:210px;">
+                            <ul class="brand_menu" >
+
+                            </ul>
                         </div>
                     </div>
                     <hr class="filter_hr"/>
@@ -212,8 +218,29 @@ $(document).ready(function() {
 });*/
 
 
+$('#brand_icon_box').click(function () {
+    let bm = $('.brand_menu');
 
 
+    $.ajax({
+        type: "POST",
+        url: "<c:url value='/shop/brandList'/>",
+        data: {},
+        dataType: "json", // 서버에서 JSON 반환
+        success: function (result) {
+            console.log(result); // 받은 데이터를 확인합니다.
+            let str = "";
+            $(result).each(function(index){
+                str = "<li><label for='category_chk"+(index+1)+"'><input type='checkbox' data-value='"+result[index]+"' class='category_chk' id='brand_chk"+(index+1)+"'/> "+result[index]+"</label></li>";
+                bm.append(str);
+            });
+
+        },
+        error: function(res) {
+            alert(res.responseText); // 오류 발생 시 경고창 표시
+        }
+    });
+});
 
 
 

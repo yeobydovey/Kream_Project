@@ -29,6 +29,11 @@ public class StandardProductService implements ProductService{
     }
 
     @Override
+    public List<String> brandList() throws Exception {
+        return productDao.brandList();
+    }
+
+    @Override
     public int productCreate(ProductDto productDto) throws Exception {
         return productDao.productCreate(productDto);
     }

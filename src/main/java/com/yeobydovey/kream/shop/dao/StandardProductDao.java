@@ -26,6 +26,13 @@ public class StandardProductDao implements ProductDao{
     }
 
     @Override
+    public List<String> brandList() throws Exception {
+        System.out.println("brandList dao실행");
+        return session.selectList(namespace+"brandList");
+    }
+
+
+    @Override
     public int productCreate(ProductDto productDto) throws Exception {
         System.out.println("productCreate 실행");
 
